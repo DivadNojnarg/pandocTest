@@ -11,9 +11,9 @@ id = '3cae7040-506b-443e-84f5-0e5375c34cd7'
 dashboard_url = 'https://rsc.cynkra.com/connect/#/apps/3cae7040-506b-443e-84f5-0e5375c34cd7'
 direct_url = 'https://rsc.cynkra.com/content/3cae7040-506b-443e-84f5-0e5375c34cd7/'
 logs_url = 'https://rsc.cynkra.com/connect/#/apps/3cae7040-506b-443e-84f5-0e5375c34cd7/logs'
-deployed_at = '2025-08-08T15:22:12+02:00'
-bundle_id = '4009'
-bundle_url = 'https://rsc.cynkra.com/__api__/v1/content/3cae7040-506b-443e-84f5-0e5375c34cd7/bundles/4009/download'
+deployed_at = '2025-08-08T15:30:34+02:00'
+bundle_id = '4011'
+bundle_url = 'https://rsc.cynkra.com/__api__/v1/content/3cae7040-506b-443e-84f5-0e5375c34cd7/bundles/4011/download'
 files = [
   '.posit/publish/deployments/deployment-LV19.toml',
   '.posit/publish/pandoc-test-EU5L.toml',

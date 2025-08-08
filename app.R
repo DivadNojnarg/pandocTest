@@ -114,7 +114,7 @@ server <- function(input, output, session) {
           pandoc_convert(
             file = "./sample.rtf",
             from = "rtf",
-            to = "html",
+            to = "htm",
             output = "res/sample.html"
           )
         )
@@ -133,8 +133,9 @@ server <- function(input, output, session) {
         )
       },
       error = function(e) {
+        str(e)
         showNotification(
-          paste("Error during conversion:", res),
+          paste("Error during conversion."),
           type = "error"
         )
       }
