@@ -114,7 +114,7 @@ server <- function(input, output, session) {
           pandoc_convert(
             file = "./sample.rtf",
             from = "rtf",
-            to = "htm",
+            to = "html",
             output = "res/sample.html"
           )
         )
