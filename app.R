@@ -133,7 +133,6 @@ server <- function(input, output, session) {
         )
       },
       error = function(e) {
-        str(e)
         showNotification(
           paste("Error during conversion."),
           type = "error"
