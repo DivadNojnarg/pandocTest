@@ -1,0 +1,14 @@
+Title: Pandoc tester
+Author: David Granjon
+AuthorUrl: https://cynkra.com/about/#david
+License: MIT
+DisplayMode: Showcase
+Tags: pandoc, shiny, rtf, html
+Type: Shiny
+Imports: 
+    shiny,
+    bslib,
+    pandoc,
+    mirai,
+    gh,
+    DT
