@@ -107,27 +107,37 @@ server <- function(input, output, session) {
       pandoc_current()
     ))
 
-    with_pandoc_version(
-      pandoc_current(),
-      pandoc_convert(
-        file = "./sample.rtf",
-        from = "rtf",
-        to = "html",
-        output = "res/sample.html"
-      )
-    )
+    tryCatch(
+      {
+        with_pandoc_version(
+          pandoc_current(),
+          pandoc_convert(
+            file = "./sample.rtf",
+            from = "rtf",
+            to = "html",
+            output = "res/sample.html"
+          )
+        )
 
-    showModal(
-      modalDialog(
-        title = "Conversion Complete",
-        tags$iframe(
-          src = paste0("www/sample.html"),
-          width = "100%",
-          height = "500px"
-        ),
-        easyClose = TRUE,
-        footer = NULL
-      )
+        showModal(
+          modalDialog(
+            title = "Conversion Complete",
+            tags$iframe(
+              src = paste0("www/sample.html"),
+              width = "100%",
+              height = "500px"
+            ),
+            easyClose = TRUE,
+            footer = NULL
+          )
+        )
+      },
+      error = function(e) {
+        showNotification(
+          paste("Error during conversion:", res),
+          type = "error"
+        )
+      }
     )
   }) |>
     bindEvent(input$convert)
